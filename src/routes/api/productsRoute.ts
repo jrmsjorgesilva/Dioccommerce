@@ -30,13 +30,8 @@ productsRouter.post("/", async (req: Request, res: Response) => {
       selected,
     };
 
-    console.log('1', Object.values(DiocommerceProduct));
-
-    const response = await DiocommerceProduct.create(newData);
-    console.log('2', newData);
-
-    return res.status(201).json(response);
-
+    const createdData = await DiocommerceProduct.create(newData);
+    return res.status(201).json(createdData);
   } catch (error: any) {
     return error;
   }
@@ -67,6 +62,7 @@ productsRouter.get("/:uuid", async (req: Request, res: Response) => {
 productsRouter.patch("/:uuid", async (req: Request, res: Response) => {
   try {
     // todo
+    return
   } catch (error: any) {
     return error;
   }
@@ -76,6 +72,7 @@ productsRouter.patch("/:uuid", async (req: Request, res: Response) => {
 productsRouter.delete("/:uuid", async (req: Request, res: Response) => {
   try {
     // todo
+    return
   } catch (error: any) {
     return error;
   }

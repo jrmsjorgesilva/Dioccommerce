@@ -7,6 +7,7 @@ dotenv.config();
 // routes
 import usersRoute from "./routes/api/usersRoute";
 import productsRoute from "./routes/api/productsRoute";
+import notFoundRoute from './routes/404/notFoundRoute';
 
 const PORT = process.env.PORT || 8000;
 const server = express();
@@ -19,6 +20,7 @@ server.use("/$", (req: Request, res: Response) => {
 });
 server.use("/users", usersRoute);
 server.use('/products', productsRoute)
+server.use('/*', notFoundRoute)
 
 mongooseConnect(server);
 
