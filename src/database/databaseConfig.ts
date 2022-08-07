@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
 import { Express } from 'express';
+import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 
