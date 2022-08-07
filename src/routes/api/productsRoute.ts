@@ -1,41 +1,11 @@
 import { Router, Response, Request } from "express";
 import DiocommerceProduct from "../../models/DiocommerceProduct";
+import createProduct from '../../controllers/productsController/createProduct';
 
 const productsRouter = Router();
 
 // POST
-productsRouter.post("/", async (req: Request, res: Response) => {
-  try {
-    const {
-      id_product,
-      category,
-      fk_idcategorys,
-      name_product,
-      price,
-      image,
-      id_categorys,
-      name_categorys,
-      selected,
-    } = req.body;
-
-    const newData: any = {
-      id_product,
-      category,
-      fk_idcategorys,
-      name_product,
-      price,
-      image,
-      id_categorys,
-      name_categorys,
-      selected,
-    };
-
-    const createdData = await DiocommerceProduct.create(newData);
-    return res.status(201).json(createdData);
-  } catch (error: any) {
-    return error;
-  }
-});
+productsRouter.post("/", createProduct);
 
 // GET
 productsRouter.get("/", async (req: Request, res: Response) => {

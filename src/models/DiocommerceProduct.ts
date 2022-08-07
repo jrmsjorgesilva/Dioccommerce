@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-type DiocommerceProductType = {
+interface DiocommerceProductType {
   id_product: number;
   category: string;
   fk_idcategorys: number;
@@ -10,9 +10,9 @@ type DiocommerceProductType = {
   id_categorys: number;
   name_categorys: string;
   selected: Boolean;
-};
+}
 
-const DiocommerceProduct = mongoose.model<any>("DiocommerceProduct", {
+const DiocommerceProductSchema = new mongoose.Schema<DiocommerceProductType>({
   id_product: String,
   category: String,
   fk_idcategorys: Number,
@@ -23,5 +23,10 @@ const DiocommerceProduct = mongoose.model<any>("DiocommerceProduct", {
   name_categorys: String,
   selected: Boolean,
 });
+
+const DiocommerceProduct = mongoose.model<DiocommerceProductType>(
+  "DiocommerceProduct",
+  DiocommerceProductSchema
+);
 
 export default DiocommerceProduct;
