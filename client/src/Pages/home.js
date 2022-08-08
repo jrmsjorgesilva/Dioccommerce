@@ -19,6 +19,8 @@ const HomePage = () => {
     const products = useSelector(state => state.products)
     const classes = useStyles();
 
+    console.log('debug', products)
+
     const categorys = products.map(
         category => {
             const container = { };

@@ -22,6 +22,10 @@ const Card = ({ product, children }) => {
   const dispatch = useDispatch();
   const classes = useStyles();
 
+  const addProductToCart = (cart, product) => {
+    dispatch(cartActions.Add(cart, product));
+  };
+
   return (
     <Grid item xs={3}>
       <Paper className={classes.paper}>
@@ -42,7 +46,7 @@ const Card = ({ product, children }) => {
 
           <Button
             variant="contained"
-            onClick={() => dispatch(cartActions.Add(cart, product))}
+            onClick={() => addProductToCart(cart, product)}
           >
             Adicionar
           </Button>
