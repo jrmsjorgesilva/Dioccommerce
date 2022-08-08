@@ -1,8 +1,8 @@
-import { Router, Response, Request } from "express";
-// controllers 
-import createProduct from '../../controllers/productsController/createProduct';
+import { Router } from "express";
+// controllers
+import createProduct from "../../controllers/productsController/createProduct";
 import getProductById from "../../controllers/productsController/getProductById";
-import getProduct from "../../controllers/productsController/getProduct";
+import getProducts from "../../controllers/productsController/getProducts";
 import updateProduct from "../../controllers/productsController/updateProduct";
 import deleteProduct from "../../controllers/productsController/deleteProduct";
 
@@ -12,7 +12,7 @@ const productsRouter = Router();
 productsRouter.post("/", createProduct);
 
 // GET
-productsRouter.get("/", getProduct);
+productsRouter.get("/", getProducts);
 
 // GET UUID
 productsRouter.get("/:uuid", getProductById);

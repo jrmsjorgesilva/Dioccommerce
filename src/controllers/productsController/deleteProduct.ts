@@ -3,12 +3,12 @@ import DiocommerceProduct from "../../models/DiocommerceProduct";
 
 const deleteProduct = async (req: Request, res: Response) => {
   try {
-    const idToDelete = req.params.uuid;
+    const idToBeDeleted = req.params.uuid;
 
-    const deletedProduct = await DiocommerceProduct.deleteOne({
-      _id: idToDelete,
+    const response = await DiocommerceProduct.deleteOne({
+      _id: idToBeDeleted,
     });
-    return res.status(400).json(deletedProduct);
+    return res.status(400).json(response);
   } catch (error: any) {
     return res.status(400).json({ error: error.message });
   }

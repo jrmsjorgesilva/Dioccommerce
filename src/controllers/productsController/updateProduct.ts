@@ -3,7 +3,7 @@ import DiocommerceProduct from "../../models/DiocommerceProduct";
 
 const updateProduct = async (req: Request, res: Response) => {
   try {
-    const idToUpdate = req.params.uuid;
+    const idToBeUpdated = req.params.uuid;
 
     const {
       id_product,
@@ -17,7 +17,7 @@ const updateProduct = async (req: Request, res: Response) => {
       selected,
     } = req.body;
 
-    const productToUpdate = {
+    const productToBeUpdated = {
       id_product,
       category,
       fk_idcategorys,
@@ -29,12 +29,12 @@ const updateProduct = async (req: Request, res: Response) => {
       selected,
     };
 
-    const updatedProduct = await DiocommerceProduct.updateOne(
-      { _id: idToUpdate },
-      productToUpdate
+    const response = await DiocommerceProduct.updateOne(
+      { _id: idToBeUpdated },
+      productToBeUpdated
     );
 
-    return res.status(200).json(updatedProduct);
+    return res.status(200).json(response);
   } catch (error: any) {
     return res.status(400).json({ error: error.message });
   }

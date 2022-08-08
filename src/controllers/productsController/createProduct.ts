@@ -15,7 +15,7 @@ const createProduct = async (req: Request, res: Response): Promise<any> => {
       selected,
     } = req.body;
 
-    const newData: any = {
+    const productToBeCreated: any = {
       id_product,
       category,
       fk_idcategorys,
@@ -26,9 +26,7 @@ const createProduct = async (req: Request, res: Response): Promise<any> => {
       name_categorys,
       selected,
     };
-
-    console.log('newData', newData)
-    const response = await DiocommerceProduct.create(newData);
+    const response = await DiocommerceProduct.create(productToBeCreated);
     return res.status(201).json(response);
   } catch (error: any) {
     return res.status(404).json({ msg: error.message});
