@@ -1,21 +1,21 @@
 import mongoose from "mongoose";
 
 interface DiocommerceProductType {
-  id_product: number;
+  id_product: string;
   category: string;
-  fk_idcategorys: number;
+  fk_idcategorys: string;
   name_product: string;
   price: number;
   image: string;
-  id_categorys: number;
+  id_categorys: string;
   name_categorys: string;
-  selected: Boolean;
+  selected: boolean;
 }
 
 const DiocommerceProductSchema = new mongoose.Schema<DiocommerceProductType>({
   id_product: String,
   category: String,
-  fk_idcategorys: Number,
+  fk_idcategorys: String,
   name_product: String,
   price: Number,
   image: String,

@@ -1,7 +1,7 @@
 import DiocommerceProduct from "../../models/DiocommerceProduct";
 import { Request, Response } from "express";
 
-const createProduct = async (req: Request, res: Response) => {
+const createProduct = async (req: Request, res: Response): Promise<any> => {
   try {
     const {
       id_product,
@@ -27,10 +27,11 @@ const createProduct = async (req: Request, res: Response) => {
       selected,
     };
 
-    await DiocommerceProduct.create(newData);
-    return res.status(201).json({ msg: 'funcionou'});
+    console.log('newData', newData)
+    const response = await DiocommerceProduct.create(newData);
+    return res.status(201).json(response);
   } catch (error: any) {
-    return res.status(404).json({ msg: 'error'});
+    return res.status(404).json({ msg: error.message});
   }
 };
 
