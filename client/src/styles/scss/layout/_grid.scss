@@ -1,0 +1,7 @@
+.app {
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 2rem 1rem;
+  }
+}
