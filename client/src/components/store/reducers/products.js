@@ -1,7 +1,9 @@
-import productsList from './product';
+import productsList from "./product";
 
-const PRODUCT = productsList;
+const INITIAL_STATE = productsList;
 
-export default function products(state = PRODUCT){
-    return state;
-}
+const products = (state = INITIAL_STATE) => {
+  return state;
+};
+
+export default products;
