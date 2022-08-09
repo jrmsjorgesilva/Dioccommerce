@@ -11,14 +11,9 @@
   text-transform: capitalize;
 }
 
-*::-moz-selection {
-  background-color: black;
-  color: rgb(170, 255, 241);
-}
-
 *::selection {
   background-color: black;
-  color: rgb(170, 255, 241);
+  color: $primary-color;
 }
 
 ::-webkit-scrollbar {
@@ -31,16 +26,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(170, 255, 241);
+  background-color: $primary-bg;
   border-radius: 5rem;
 }
 
 fieldset {
   border: none;
 }
-
-.app__grid {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  padding: 2rem 1rem;
-}/*# sourceMappingURL=main.css.map */
