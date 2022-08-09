@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import About from "../components/pages/About";
+import Blog from "../components/pages/Blog";
 import Home from "../components/pages/Home";
 import NotFoundPage from "../components/pages/NotFoundPage";
 import Product from "../components/pages/Product";
@@ -19,6 +20,7 @@ const AppRouter = () => {
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<Product />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/*" element={<NotFoundPage />} />
         </Routes>
       </div>

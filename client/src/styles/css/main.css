@@ -76,4 +76,27 @@ fieldset {
   .nav__link {
     margin: 0rem 0.4rem;
   }
+}
+.products__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.products__card--body {
+  margin: 1rem;
+  padding: 1.4rem 1rem;
+  background-color: rgb(170, 255, 241);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.products__card--delete {
+  float: right;
+  color: firebrick;
+  cursor: pointer;
+  margin: 0rem 0.6rem;
+}
+.products__card--edit {
+  float: right;
+  color: lime;
+  cursor: pointer;
+  margin: 0rem 0.6rem;
 }/*# sourceMappingURL=main.css.map */

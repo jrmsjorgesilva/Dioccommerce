@@ -1,4 +1,5 @@
 type ProductsType = {
+  _id?: string,
   id_product: string;
   category: string;
   fk_idcategorys: string;

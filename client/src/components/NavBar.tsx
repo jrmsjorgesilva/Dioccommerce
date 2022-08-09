@@ -21,6 +21,9 @@ const NavBar = () => {
         <Link className="nav__link" to="/products/:id">
           Product
         </Link>
+        <Link className="nav__link" to="/blog">
+          Blog
+        </Link>
       </nav>
     </header>
   );
