@@ -35,6 +35,26 @@
   border-radius: 5rem;
 }
 
+html {
+  overflow-x: hidden;
+  scroll-padding-top: 8rem;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: aliceblue;
+  padding-top: 6rem;
+  background-color: rgb(190, 190, 190);
+  background-clip: border-box;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  background-attachment: fixed;
+}
+
 fieldset {
   border: none;
 }
@@ -46,12 +66,20 @@ fieldset {
 }
 
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(170, 255, 241);
   display: flex;
   justify-content: space-between;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0rem auto;
   padding: 1rem;
-  background-color: rgb(170, 255, 241);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 1000;
 }
 .nav__logo {
   padding: 1rem 0.6rem;
@@ -63,7 +91,7 @@ fieldset {
   margin: 0rem 1.2rem;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .nav {
     padding: 0.6rem;
   }
@@ -77,26 +105,111 @@ fieldset {
     margin: 0rem 0.4rem;
   }
 }
-.products__card {
+.card {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.products__card--body {
+.card__body {
   margin: 1rem;
   padding: 1.4rem 1rem;
   background-color: rgb(170, 255, 241);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-.products__card--delete {
+.card__btn--delete {
+  font-size: 2.2rem;
+  cursor: pointer;
   float: right;
   color: firebrick;
-  cursor: pointer;
   margin: 0rem 0.6rem;
 }
-.products__card--edit {
+.card__btn--edit {
+  font-size: 2.2rem;
+  cursor: pointer;
   float: right;
   color: lime;
-  cursor: pointer;
   margin: 0rem 0.6rem;
+}
+.card__text--title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  padding: 1.4rem 0rem;
+}
+.card__text--subtitle {
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 0.6rem 0rem;
+}
+.card__text--price {
+  font-size: 3rem;
+  font-weight: 900;
+  padding: 0.4rem 0rem;
+  float: right;
+}
+.card__text--paragraph {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.4rem 0rem;
+}
+
+.btn--add {
+  color: white;
+  background-color: lime;
+  display: block;
+  width: 98%;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 1rem;
+  margin: 1.2rem 1rem;
+  cursor: pointer;
+}
+.btn--add:focus, .btn--add:hover {
+  opacity: 0.9;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.input__search {
+  padding: 1rem;
+  margin: 1.2rem 1rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  width: 97%;
+}
+.input__search--icon {
+  position: absolute;
+  top: 15%;
+  left: 95%;
+  font-size: 1.6rem;
+  color: lime;
+}
+
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  background-color: rgb(170, 255, 241);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.modal__input {
+  display: block;
+  width: 40rem;
+  padding: 1rem;
+  margin: 1.2rem auto;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.modal__header {
+  font-size: 4.6rem;
+  text-align: center;
+  font-weight: 900;
+  padding: 1.2rem;
+}
+.modal__footer {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

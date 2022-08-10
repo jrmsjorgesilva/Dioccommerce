@@ -1,30 +1,57 @@
-.products {
-  &__card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-    &--body {
-      margin: 1rem;
-      padding: 1.4rem 1rem;
-      background-color: $primary-bg;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    }
+  &__body {
+    margin: 1rem;
+    padding: 1.4rem 1rem;
+    background-color: $primary-bg;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
 
+  &__btn {
     &--delete {
+      font-size: 2.2rem;
+      cursor: pointer;
       float: right;
       color: firebrick;
-      cursor: pointer;
-      margin: 0rem .6rem;
-
+      margin: 0rem 0.6rem;
     }
 
     &--edit {
+      font-size: 2.2rem;
+      cursor: pointer;
       float: right;
       color: lime;
-      cursor: pointer;
-      margin: 0rem .6rem;
+      margin: 0rem 0.6rem;
+    }
+  }
 
+  &__text {
+    &--title {
+      font-size: 2.4rem;
+      font-weight: 800;
+      padding: 1.4rem 0rem;
+    }
+
+    &--subtitle {
+      font-size: 1.8rem;
+      font-weight: 500;
+      padding: 0.6rem 0rem;
+    }
+
+    &--price {
+      font-size: 3rem;
+      font-weight: 900;
+      padding: 0.4rem 0rem;
+      float: right;
+    }
+
+    &--paragraph {
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0.4rem 0rem;
     }
   }
 }

@@ -30,6 +30,29 @@
   border-radius: 5rem;
 }
 
+html {
+  overflow-x: hidden;
+  scroll-padding-top: 8rem;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: aliceblue;
+  padding-top: 6rem;
+
+  // BACKGROUND
+  background-color: rgb(190, 190, 190);
+  // background-image: url("../../assets/img/background-cellguy.png");
+  background-clip: border-box;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  background-attachment: fixed;
+}
+
 fieldset {
   border: none;
 }

@@ -1,0 +1,34 @@
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  background-color: $primary-bg;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  &__input {
+    display: block;
+    width: 40rem;
+    padding: 1rem;
+    margin: 1.2rem auto;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+
+  &__header {
+    font-size: 4.6rem;
+    text-align: center;
+    font-weight: 900;
+    padding: 1.2rem;
+  }
+
+  &__body {
+  }
+
+  &__footer {
+    text-align: center;
+  }
+}

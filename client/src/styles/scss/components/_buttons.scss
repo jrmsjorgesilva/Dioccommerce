@@ -1,0 +1,22 @@
+.btn__group {
+}
+
+.btn--add {
+  color: white;
+  background-color: lime;
+  display: block;
+  width: 98%;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 1rem;
+  margin: 1.2rem 1rem;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    opacity: .9;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+}
