@@ -1,0 +1,26 @@
+.text {
+    &--title {
+      font-size: 2.4rem;
+      font-weight: 800;
+      padding: 1.4rem 0rem;
+    }
+
+    &--subtitle {
+      font-size: 1.8rem;
+      font-weight: 500;
+      padding: 0.6rem 0rem;
+    }
+
+    &--price {
+      font-size: 3rem;
+      font-weight: 900;
+      padding: 0.4rem 0rem;
+      float: right;
+    }
+
+    &--paragraph {
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0.4rem 0rem;
+    }
+  }

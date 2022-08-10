@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import ProductsType from "../../@types/ProductsType";
 import { FaTrash, FaEdit, FaPlus, FaSearch } from "react-icons/fa";
 // utils 
-import generateRandomId from "../utils/generateRandomId";
+import generateRandomId from "../../utils/generateRandomId";
 // mocks 
-import mockProducts from "../mocks/mockProducts";
+import mockProducts from "../../mocks/mockProducts";
 // components
 import Swal from "sweetalert2";
 import axios from "axios";
@@ -168,7 +168,7 @@ const Products = () => {
 
   return (
     <section className="products">
-      <div className="products__container">
+      <div className="container">
         <input
           type="text"
           className="input__search"
@@ -176,7 +176,7 @@ const Products = () => {
           onChange={() => {}}
         />
         <FaSearch className="input__search--icon" />
-        <ul className="card">
+        <ul className="card grid--two__columns">
           {productsList?.map((prod) => (
             <li className="card__body" key={prod._id}>
               <FaTrash
@@ -190,15 +190,15 @@ const Products = () => {
                 onClick={() => updateProduct(prod._id)}
               />
               <img src={prod.image} alt={prod.name_product} />
-              <p className="card__text--title">{prod.name_product}</p>
+              <p className="text--title">{prod.name_product}</p>
               <span
                 style={{ display: "flex", justifyContent: "space-between" }}
               >
                 <span>
-                  <p className="card__text--subtitle">{prod.name_categorys}</p>
-                  <p className="card__text--paragraph">{prod.category}</p>
+                  <p className="text--subtitle">{prod.name_categorys}</p>
+                  <p className="text--paragraph">{prod.category}</p>
                 </span>
-                <p className="card__text--price">R$ {prod.price}</p>
+                <p className="text--price">R$ {prod.price}</p>
               </span>
             </li>
           ))}

@@ -5,3 +5,15 @@
     padding: 2rem 1rem;
   }
 }
+
+.grid {
+  &--two__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &--three__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
