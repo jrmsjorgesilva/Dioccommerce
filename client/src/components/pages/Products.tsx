@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import ProductsType from "../../@types/ProductsType";
 import { FaTrash, FaEdit, FaPlus, FaSearch } from "react-icons/fa";
+// utils 
+import generateRandomId from "../utils/generateRandomId";
+// mocks 
+import mockProducts from "../mocks/mockProducts";
 // components
 import Swal from "sweetalert2";
 import axios from "axios";
@@ -8,76 +12,22 @@ import axios from "axios";
 const FETCH_URL = `http://localhost:8000/products`;
 
 const Products = () => {
-  const [productsList, setProductsList] = useState<ProductsType[]>(() => [
-    {
-      _id: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString(),
-      id_product: Math.floor(
-        Math.random() * Number.MAX_SAFE_INTEGER
-      ).toString(),
-      category: "Data Science",
-      fk_idcategorys: Math.floor(
-        Math.random() * Number.MAX_SAFE_INTEGER
-      ).toString(),
-      name_product: "Aprenda Python Fácil",
-      price: 900,
-      image: "./images/produtos/dataScience.jpg",
-      id_categorys: Math.floor(
-        Math.random() * Number.MAX_SAFE_INTEGER
-      ).toString(),
-      name_categorys: "Python for Data Science",
-      selected: false,
-    },
-
-    {
-      _id: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString(),
-      id_product: Math.floor(
-        Math.random() * Number.MAX_SAFE_INTEGER
-      ).toString(),
-      category: "Web Development",
-      fk_idcategorys: Math.floor(
-        Math.random() * Number.MAX_SAFE_INTEGER
-      ).toString(),
-      name_product: "Sênior em 3 dias",
-      price: 400,
-      image: "./images/produtos/webDevelopment.jpg",
-      id_categorys: Math.floor(
-        Math.random() * Number.MAX_SAFE_INTEGER
-      ).toString(),
-      name_categorys: "Angular",
-      selected: false,
-    },
-    {
-      _id: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString(),
-      id_product: Math.floor(
-        Math.random() * Number.MAX_SAFE_INTEGER
-      ).toString(),
-      category: "Machine Learning",
-      fk_idcategorys: Math.floor(
-        Math.random() * Number.MAX_SAFE_INTEGER
-      ).toString(),
-      name_product: "Curso Inteligencia Artificiosa em 1 mês",
-      price: 300,
-      image: "./images/produtos/machineLearning.jpg",
-      id_categorys: Math.floor(
-        Math.random() * Number.MAX_SAFE_INTEGER
-      ).toString(),
-      name_categorys: "Artificial Inteligence",
-      selected: false,
-    },
-  ]);
+  const [productsList, setProductsList] = useState<ProductsType[]>(
+    () => mockProducts
+  );
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(FETCH_URL);
-        setProductsList(response.data);
+        const { data } = await axios.get(FETCH_URL);
+        setProductsList([...data]);
       } catch (error: any) {
         console.error(error);
       }
     };
 
     fetchProducts();
-  }, []);
+  }, [productsList]);
 
   const addProduct = () => {
     Swal.fire({
@@ -113,19 +63,13 @@ const Products = () => {
                   showLoaderOnConfirm: true,
                   preConfirm: async (newPrice) => {
                     const newProductList = {
-                      id_product: Math.floor(
-                        Math.random() * Number.MAX_SAFE_INTEGER
-                      ).toString(),
+                      id_product: generateRandomId(),
                       category: newCategory,
-                      fk_idcategorys: Math.floor(
-                        Math.random() * Number.MAX_SAFE_INTEGER
-                      ).toString(),
+                      fk_idcategorys: generateRandomId(),
                       name_product: newNameProduct,
                       price: newPrice,
                       image: "./images/produtos/placeholder.jpg",
-                      id_categorys: Math.floor(
-                        Math.random() * Number.MAX_SAFE_INTEGER
-                      ).toString(),
+                      id_categorys: generateRandomId(),
                       name_categorys: newNameCategory,
                       selected: false,
                     };
@@ -190,19 +134,13 @@ const Products = () => {
                   showLoaderOnConfirm: true,
                   preConfirm: async (newPrice) => {
                     const newProductList = {
-                      id_product: Math.floor(
-                        Math.random() * Number.MAX_SAFE_INTEGER
-                      ).toString(),
+                      id_product: generateRandomId(),
                       category: newCategory,
-                      fk_idcategorys: Math.floor(
-                        Math.random() * Number.MAX_SAFE_INTEGER
-                      ).toString(),
+                      fk_idcategorys: generateRandomId(),
                       name_product: newNameProduct,
                       price: newPrice,
                       image: "./images/produtos/placeholder.jpg",
-                      id_categorys: Math.floor(
-                        Math.random() * Number.MAX_SAFE_INTEGER
-                      ).toString(),
+                      id_categorys: generateRandomId(),
                       name_categorys: newNameCategory,
                       selected: false,
                     };
@@ -210,7 +148,7 @@ const Products = () => {
                       (prod) => prod._id !== id
                     );
                     try {
-                      await axios.patch(`${FETCH_URL}/${id}`);
+                      await axios.patch(`${FETCH_URL}/${id}`, newProductList);
                       setProductsList((oldProductList) => [
                         ...filteredProductsList,
                         newProductList,
