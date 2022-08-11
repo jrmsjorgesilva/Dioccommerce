@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Cart from "./cart/Cart";
 // import { logo } from "../../public/assets/img/JM-logo.png";
 
 const NavBar = () => {
@@ -21,6 +22,9 @@ const NavBar = () => {
         <Link className="nav__link" to="/blog">
           Blog
         </Link>
+        <span className="nav__link cart" style={{ float: "right" }}>
+          <Cart />
+        </span>
       </nav>
     </header>
   );
