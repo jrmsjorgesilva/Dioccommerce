@@ -1,4 +1,5 @@
 import React from "react";
+import { FaCartPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Cart from "./cart/Cart";
 // import { logo } from "../../public/assets/img/JM-logo.png";
@@ -23,7 +24,9 @@ const NavBar = () => {
           Blog
         </Link>
         <span className="nav__link cart" style={{ float: "right" }}>
-          <Cart />
+          <Link to="/cart">
+            <FaCartPlus />
+          </Link>
         </span>
       </nav>
     </header>
