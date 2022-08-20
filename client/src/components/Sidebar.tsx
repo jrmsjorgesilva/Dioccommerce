@@ -2,119 +2,119 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <nav className="nav" data-expanded="true">
-      <div className="nav__main">
-        <div className="nav__logo">
+    <aside className="sidebar" data-expanded="true">
+      <div className="sidebar__main">
+        <div className="sidebar__logo">
           svg
         </div>
-        <span className="nav__heading">
-          <span className="nav__heading-text">Analytics</span>
+        <span className="sidebar__heading">
+          <span className="sidebar__heading-text">Analytics</span>
         </span>
-        <ul className="nav__items">
-          <li className="nav__item">
-            <a className="nav__item-box" href="#" title="Dashboard">
-              <span className="nav__item-icon">
+        <ul className="sidebar__items">
+          <li className="sidebar__item">
+            <a className="sidebar__item-box" href="#" title="Dashboard">
+              <span className="sidebar__item-icon">
                 svg
               </span>
-              <span className="nav__item-text">Dashboard</span>
+              <span className="sidebar__item-text">Dashboard</span>
             </a>
           </li>
-          <li className="nav__item">
-            <a className="nav__item-box" href="#" title="Performance">
-              <span className="nav__item-icon">
+          <li className="sidebar__item">
+            <a className="sidebar__item-box" href="#" title="Performance">
+              <span className="sidebar__item-icon">
                 svg
               </span>
-              <span className="nav__item-text">Performance</span>
+              <span className="sidebar__item-text">Performance</span>
             </a>
           </li>
         </ul>
-        <span className="nav__heading">
-          <span className="nav__heading-text">Content</span>
+        <span className="sidebar__heading">
+          <span className="sidebar__heading-text">Content</span>
         </span>
-        <ul className="nav__items">
-          <li className="nav__item">
-            <a className="nav__item-box" href="#" title="Guides">
-              <span className="nav__item-icon">
+        <ul className="sidebar__items">
+          <li className="sidebar__item">
+            <a className="sidebar__item-box" href="#" title="Guides">
+              <span className="sidebar__item-icon">
                 svg
               </span>
-              <span className="nav__item-text">Guides</span>
+              <span className="sidebar__item-text">Guides</span>
             </a>
           </li>
-          <li className="nav__item">
-            <a className="nav__item-box" href="#" title="Hotspots (28)">
-              <span className="nav__item-icon nav__item-icon--badge">
+          <li className="sidebar__item">
+            <a className="sidebar__item-box" href="#" title="Hotspots (28)">
+              <span className="sidebar__item-icon sidebar__item-icon--badge">
                 svg
               </span>
-              <span className="nav__item-text">
-                Hotspots <strong className="nav__item-badge">28</strong>
+              <span className="sidebar__item-text">
+                Hotspots <strong className="sidebar__item-badge">28</strong>
               </span>
             </a>
           </li>
-          <li className="nav__item">
-            <a className="nav__item-box" href="#" title="Checklists">
-              <span className="nav__item-icon">
+          <li className="sidebar__item">
+            <a className="sidebar__item-box" href="#" title="Checklists">
+              <span className="sidebar__item-icon">
                 svg
               </span>
-              <span className="nav__item-text">Checklists</span>
+              <span className="sidebar__item-text">Checklists</span>
             </a>
           </li>
-          <li className="nav__item">
-            <a className="nav__item-box" href="#" title="NPS">
-              <span className="nav__item-icon">
+          <li className="sidebar__item">
+            <a className="sidebar__item-box" href="#" title="NPS">
+              <span className="sidebar__item-icon">
                 svg
               </span>
-              <span className="nav__item-text">NPS</span>
+              <span className="sidebar__item-text">NPS</span>
             </a>
           </li>
         </ul>
-        <span className="nav__heading">
-          <span className="nav__heading-text">Customize</span>
+        <span className="sidebar__heading">
+          <span className="sidebar__heading-text">Customize</span>
         </span>
-        <ul className="nav__items">
-          <li className="nav__item">
+        <ul className="sidebar__items">
+          <li className="sidebar__item">
             <a
-              className="nav__item-box nav__item-box--red"
+              className="sidebar__item-box sidebar__item-box--red"
               href="#"
               title="Segments (24)"
             >
-              <span className="nav__item-icon nav__item-icon--badge">
+              <span className="sidebar__item-icon sidebar__item-icon--badge">
                 svg
               </span>
-              <span className="nav__item-text">
-                Segments <strong className="nav__item-badge">24</strong>
+              <span className="sidebar__item-text">
+                Segments <strong className="sidebar__item-badge">24</strong>
               </span>
             </a>
           </li>
-          <li className="nav__item">
-            <a className="nav__item-box" href="#" title="Themes">
-              <span className="nav__item-icon">
+          <li className="sidebar__item">
+            <a className="sidebar__item-box" href="#" title="Themes">
+              <span className="sidebar__item-icon">
                 svg
               </span>
-              <span className="nav__item-text">Themes</span>
+              <span className="sidebar__item-text">Themes</span>
             </a>
           </li>
         </ul>
       </div>
-      <div className="nav__bottom">
-        <ul className="nav__items">
-          <li className="nav__item">
+      <div className="sidebar__bottom">
+        <ul className="sidebar__items">
+          <li className="sidebar__item">
             <button
-              className="nav__item-box"
+              className="sidebar__item-box"
               type="button"
               aria-expanded="true"
               data-expand
             >
-              <span className="nav__item-icon">
+              <span className="sidebar__item-icon">
                 svg
               </span>
-              <span className="nav__item-text" data-expand-label>
+              <span className="sidebar__item-text" data-expand-label>
                 Collapse
               </span>
             </button>
           </li>
         </ul>
       </div>
-    </nav>
+    </aside>
   );
 };
 
