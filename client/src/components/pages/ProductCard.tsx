@@ -4,6 +4,7 @@ import ProductsType from "../../@types/ProductsType";
 import Swal from "sweetalert2";
 import axios from "axios";
 import generateRandomId from "../../utils/generateRandomId";
+import placeholderImg from '../../img/Angular-1.jpg';
 
 const FETCH_URL = `http://localhost:8000/products`;
 
@@ -108,7 +109,7 @@ const ProductCard: React.FC<ProductsTypeProps> = ({
             role="button"
             onClick={() => updateProduct(prod._id)}
           />
-          <img src={prod.image} alt={prod.name_product} />
+          <img src={!prod.image || placeholderImg} width="100%" height="200" alt={prod.name_product} />
           <p className="text--title">{prod.name_product}</p>
           <span style={{ display: "flex", justifyContent: "space-between" }}>
             <span>
