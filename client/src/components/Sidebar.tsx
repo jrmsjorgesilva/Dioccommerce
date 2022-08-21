@@ -12,7 +12,7 @@ import {
 
 const Sidebar = () => {
   return (
-    <aside className="sidebar" data-expanded="true">
+    <aside className="sidebar">
       <div className="sidebar__main">
         <div className="sidebar__logo">
           <FaAngular />
@@ -26,7 +26,10 @@ const Sidebar = () => {
               <span className="sidebar__item-icon">
                 <FaNewspaper />
               </span>
-              <span className="sidebar__item-text">Novidades</span>
+              <span className="sidebar__item-text">
+                Novidades
+                <strong className="sidebar__item-badge">24</strong>
+              </span>
             </a>
           </li>
           <li className="sidebar__item">
@@ -34,7 +37,10 @@ const Sidebar = () => {
               <span className="sidebar__item-icon">
                 <FaCartArrowDown />
               </span>
-              <span className="sidebar__item-text">Carrinho</span>
+              <span className="sidebar__item-text">
+                Carrinho
+                <strong className="sidebar__item-badge">{0}</strong>
+              </span>
             </a>
           </li>
         </ul>
@@ -55,10 +61,7 @@ const Sidebar = () => {
               <span className="sidebar__item-icon sidebar__item-icon--badge">
                 <FaPython />
               </span>
-              <span className="sidebar__item-text">
-                Machine Learning{" "}
-                <strong className="sidebar__item-badge">28</strong>
-              </span>
+              <span className="sidebar__item-text">Machine Learning</span>
             </a>
           </li>
           <li className="sidebar__item">
@@ -91,9 +94,7 @@ const Sidebar = () => {
               <span className="sidebar__item-icon sidebar__item-icon--badge">
                 <FaHeart />
               </span>
-              <span className="sidebar__item-text">
-                Frontend <strong className="sidebar__item-badge">24</strong>
-              </span>
+              <span className="sidebar__item-text">Frontend</span>
             </a>
           </li>
           <li className="sidebar__item">

@@ -12,11 +12,13 @@
 @import "layout/navbar";
 // VENDORS
 @import "vendor/helpers";
+@import "vendor/bootstrap_eccommerce";
 // COMPONENTS
 @import "components/cards";
 @import "components/buttons";
 @import "components/inputs";
 @import "components/modal";
+@import "components/tables";
 @import "components/sidebar";
 @import "components/cart";
 // PAGES
@@ -24,3 +26,5 @@
 // THEMES
 @import "themes/admin";
 @import "themes/theme";
+
+
