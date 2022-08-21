@@ -3,7 +3,7 @@ import { FaMinus, FaPlus, FaTimes } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { RootState } from "../../store/store";
-import { add, subtract } from "../../store/store.cart";
+import { add, subtract } from "../../store/reducers/store.cart";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -45,17 +45,17 @@ const Cart = () => {
                     style={{ width: "100px" }}
                   >
                     <div className="input-group-btn">
-                      <button className="btn btn-sm btn-primary btn-minus">
+                      <button className="btn btn-sm btn-primary btn-minus" onClick={() => dispatch(subtract())}>
                         <FaMinus />
                       </button>
                     </div>
                     <input
                       type="text"
                       className="form-control form-control-sm bg-secondary text-center"
-                      value="1"
+                      value={cart.counter}
                     />
                     <div className="input-group-btn">
-                      <button className="btn btn-sm btn-primary btn-plus">
+                      <button className="btn btn-sm btn-primary btn-plus" onClick={() => dispatch(add())}>
                         <FaPlus />
                       </button>
                     </div>
@@ -85,17 +85,17 @@ const Cart = () => {
                     style={{ width: "100px" }}
                   >
                     <div className="input-group-btn">
-                      <button className="btn btn-sm btn-primary btn-minus">
+                      <button className="btn btn-sm btn-primary btn-minus" onClick={() => dispatch(subtract())}>
                         <FaMinus />
                       </button>
                     </div>
                     <input
                       type="text"
                       className="form-control form-control-sm bg-secondary text-center"
-                      value="1"
+                      value={cart.counter}
                     />
                     <div className="input-group-btn">
-                      <button className="btn btn-sm btn-primary btn-plus">
+                      <button className="btn btn-sm btn-primary btn-plus" onClick={() => dispatch(add())}>
                         <FaPlus />
                       </button>
                     </div>

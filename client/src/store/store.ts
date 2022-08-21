@@ -1,10 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import cartReducer from "./store.cart";
+import cartReducer from "./reducers/store.cart";
+import productsReducer from "./reducers/store.products";
+import postsReducer from "./reducers/store.posts";
 
 const store = configureStore({
   // todo
   reducer: {
     cart: cartReducer,
+    products: productsReducer,
+    posts: postsReducer,
   },
 });
 
