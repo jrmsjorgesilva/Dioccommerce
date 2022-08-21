@@ -7,6 +7,7 @@ import About from "../components/pages/About";
 import Blog from "../components/pages/Blog";
 import Home from "../components/pages/Home";
 import NotFoundPage from "../components/pages/NotFoundPage";
+import ProductDetail from "../components/pages/ProductDetail";
 import Products from "../components/pages/Products";
 import Sidebar from "../components/Sidebar";
 
@@ -20,6 +21,7 @@ const AppRouter = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
