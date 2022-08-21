@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaMinus, FaPlus, FaTimes } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { RootState } from "../../store/store";
 import { add, subtract } from "../../store/store.cart";
 
@@ -142,9 +143,9 @@ const Cart = () => {
                 <h5 className="font-weight-bold">Total</h5>
                 <h5 className="font-weight-bold">R$160</h5>
               </div>
-              <button className="btn btn-block btn-primary my-3 py-3">
+              <Link className="btn btn-block btn-primary my-3 py-3" to="/checkout">
                 Proceed To Checkout
-              </button>
+              </Link>
             </div>
           </div>
         </div>

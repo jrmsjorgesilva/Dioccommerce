@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cart from "../components/cart/Cart";
+import Checkout from "../components/cart/Checkout";
 import NavBar from "../components/NavBar";
 import About from "../components/pages/About";
 import Blog from "../components/pages/Blog";
@@ -21,6 +22,7 @@ const AppRouter = () => {
           <Route path="/products" element={<Products />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/*" element={<NotFoundPage />} />
         </Routes>
       </div>
