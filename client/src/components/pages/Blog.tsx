@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import mockPosts from "../../mocks/mockPosts";
 import PostsType from "../../@types/PostsType";
 import axios from "axios";
+import BlogPosts from "./BlogPosts";
 
 const FETCH_URL = `http://localhost:8000/posts`;
 
@@ -25,15 +26,7 @@ const Blog = () => {
   return (
     <section className="blog">
       <div className="container">
-        <ul className="card">
-          {postsList?.map((post) => (
-            <li className="card__body" key={post._id}>
-              <p className="text--title">{post.title}</p>
-              <p className="text--paragraph">{post.body}</p>
-              <p className="text--paragraph">{post.author}</p>
-            </li>
-          ))}
-        </ul>
+        <BlogPosts postsList={postsList} />
       </div>
     </section>
   );

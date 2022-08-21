@@ -29,12 +29,10 @@ const Home = () => {
     <section className="home">
       <div className="container">
         <h1 className="text--title">Home</h1>
-        <ul className="card">
-          <ProductCard
-            productsList={productsList}
-            setProductsList={setProductsList}
-          />
-        </ul>
+        <ProductCard
+          productsList={productsList}
+          setProductsList={setProductsList}
+        />
       </div>
     </section>
   );

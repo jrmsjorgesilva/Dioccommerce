@@ -6,7 +6,7 @@ import generateRandomId from "../../utils/generateRandomId";
 // mocks
 import mockProducts from "../../mocks/mockProducts";
 // components
-import Product from "./ProductCard";
+import ProductCard from "./ProductCard";
 // libs 
 import Swal from "sweetalert2";
 import axios from "axios";
@@ -100,7 +100,7 @@ const Products = () => {
           onChange={() => {}}
         />
         <FaSearch className="input__search--icon" />
-        <Product
+        <ProductCard
           productsList={productsList}
           setProductsList={setProductsList}
         />

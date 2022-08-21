@@ -96,7 +96,7 @@ const ProductCard: React.FC<ProductsTypeProps> = ({
   };
 
   return (
-    <ul className="card grid--two__columns">
+    <ul className="grid--two__columns">
       {productsList?.map((prod) => (
         <li className="card__body" key={prod._id}>
           <FaTrash
