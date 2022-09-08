@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import generateRandomId from "../../utils/generateRandomId";
 import placeholderImg from "../../img/Angular-1.jpg";
+import StarRating from "../StarRating";
 
 const FETCH_URL = `http://localhost:8000/products`;
 
