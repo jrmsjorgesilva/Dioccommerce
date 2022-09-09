@@ -2,6 +2,8 @@ import { configureStore } from "@reduxjs/toolkit";
 import cartReducer from "./reducers/store.cart";
 import productsReducer from "./reducers/store.products";
 import postsReducer from "./reducers/store.posts";
+import themeReducer from "./reducers/store.theme";
+import langReducer from "./reducers/store.lang";
 
 const store = configureStore({
   // todo
@@ -9,6 +11,8 @@ const store = configureStore({
     cart: cartReducer,
     products: productsReducer,
     posts: postsReducer,
+    theme: themeReducer,
+    lang: langReducer,
   },
 });
 

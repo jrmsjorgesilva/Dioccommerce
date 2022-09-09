@@ -1,7 +1,7 @@
 import React from "react";
 
 type StarRatingType = {
-  marked: number;
+  marked: boolean;
   starId: number;
 };
 
